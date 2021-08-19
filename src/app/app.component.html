@@ -1,6 +1,4 @@
-
- 
-<div style="float: left; width:50%;">
+<!-- <div style="float: left; width:50%;">
  
   <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" novalidate>
  
@@ -29,4 +27,25 @@
     </div>
  
  
-    <button>Submit</button>
+    <button>Submit</button> -->
+
+
+<div>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <div class="form-group">
+        <label>Mile: </label>
+        <input type="number" class="form-control" formControlName="Mile"><br>
+      </div>
+      <div class="form-group">
+        <label>Rate/Mile: </label>
+        <input type="number" value="{{ result }}" class="form-control" formControlName="RateperMile"><br>
+      </div>
+      <label>Rate: </label>
+      <input value="{{ show }}" type="number" class="form-control" formControlName="Rate"><br>
+    </div>
+    <div>
+      <button class="btn btn-secondary" type="button">Submit</button>
+    </div>
+  </form>
+</div>
